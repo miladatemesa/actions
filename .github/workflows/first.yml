@@ -1,8 +1,10 @@
-name: build
+name: sample-workflow
 on: ['push']
 jobs:
-  run-composer:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: ' first step'
-        run: echo 'this is the first step'
+      - name: first-step
+        uses: actions/hello-world-javascript-action
+        with:
+          who-to-greet: Milad
