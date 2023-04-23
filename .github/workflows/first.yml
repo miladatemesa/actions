@@ -4,9 +4,9 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: first-step
-        run: 'ls'
-      - name: second-step
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Milad
+      - name: List Before
+        run: 'ls -a'
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List After
+        run: 'ls -a'
