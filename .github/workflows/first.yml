@@ -2,7 +2,7 @@ name: build
 on: ['push']
 jobs:
   run-composer:
-    - runs-on: ubuntu-latest
-      steps:
-        - name: ' first step'
-          run: echo 'this is the first step'
+    runs-on: ubuntu-latest
+    steps:
+      - name: ' first step'
+        run: echo 'this is the first step'
