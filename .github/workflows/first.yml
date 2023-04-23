@@ -1,12 +1,11 @@
-name: sample-workflow
-on: ['push']
+name: build
+on:
+  - pull_request
 jobs:
-  first-job:
-    runs-on: ubuntu-latest
+  running-tests:
+    runs-on: 'ubuntu-latest'
     steps:
-      - name: List Before
-        run: 'ls -a'
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v1
-      - name: List After
-        run: 'ls -a'
+      - name: echo list
+        run: ls -a
