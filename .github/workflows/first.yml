@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first-step
+        run: 'pwd'
+      - name: second-step
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Milad
