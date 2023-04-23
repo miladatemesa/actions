@@ -1,6 +1,10 @@
-name: 'build'
-on: [push]
+name : build
+on : [push]
 jobs:
-  run-tests:
-    - name: 'install composer'
-      run: "echo installing composer"
+  composer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install-composer
+        run: 'echo installing composer'
+      - name: dump-auoload
+        run: 'dumping autoload'
